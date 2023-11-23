@@ -223,6 +223,7 @@ margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    
 }
 
 .btn{
@@ -231,6 +232,7 @@ margin-bottom: 1rem;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    font-size: 12px; 
 }
 
 .btn-color-1, .btn-color-2{
@@ -239,6 +241,15 @@ margin-bottom: 1rem;
 
 .btn-color-1:hover, .btn-color-2:hover{
 cursor: pointer;
+}
+
+.project-btn{
+    transition: transform 0.3s ease-in-out;  
+    z-index: 1;
+}
+
+.project-btn:hover{
+    transform: scale(1.1);
 }
 
 .btn-color-1, .btn-color-2:hover{
