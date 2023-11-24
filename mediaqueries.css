@@ -101,3 +101,43 @@ footer nav{
     text-align: justify;
 }
 }
+
+
+  @media screen and (max-width: 600px) {
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    /* Adjustments for About and Skill sections */
+    #about {
+        margin: 1rem; /* Add margin to the about section */
+    }
+
+    .about-containers {
+        flex-direction: column; /* Stack containers in a column */
+        align-items: center; /* Center align containers */
+    }
+
+    .details-container {
+        width: 100%; /* Make details containers full width */
+        max-width: 270px; /* Set a maximum width for better readability on smaller screens */
+        margin: 0 auto; /* Center the container */
+    }
+
+    #skillset {
+        margin: 1rem; /* Add margin to the skillset section */
+    }
+
+    .experience-details-container {
+        flex-direction: column; /* Stack skillset containers in a column */
+        align-items: center; /* Center align skillset containers */
+    }
+
+
+    .about-pic {
+        width: 100%; /* Make the image fill the container width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 1rem; /* Optionally, add border-radius for a rounded appearance */
+        max-width: 210px;
+        border-radius: 50%;
+    }
+}
