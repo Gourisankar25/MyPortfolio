@@ -195,6 +195,18 @@ section{
 .section__text__p2{
 font-size: 1.75rem;
 margin-bottom: 1rem;
+opacity: 0; /* Start with opacity set to 0 for the fade-in effect */
+animation: fadeIn 2.5s ease-in-out forwards; /* Animation properties */
+}
+
+/* Keyframe for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
 }
 
 .title{
@@ -223,6 +235,7 @@ margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: auto;                /*updated while creating certications*/
     
 }
 
@@ -326,6 +339,26 @@ color: white;
     margin:auto 0;
 }
 
+
+.text-container{
+    /* animation: slideUp 1.5s ease-in-out forwards; */
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+.animate-on-scroll {                                     /* new animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 2s;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* SKILL SECTION  */
 
 #skillset{
@@ -342,7 +375,8 @@ color: white;
 .experience-details-container{
     display:flex;
     justify-content:center;
-    flex-direction: column;
+    flex-wrap: wrap;  /* new updation by removing flex-direction: column; */
+    overflow-x: auto; /* or overflow-x: scroll; */
 }
 
 .article-container{
@@ -371,6 +405,7 @@ article.icon{
 
 #projects{
     position: relative;
+    flex: 1; 
 }
 
 .color-container{
@@ -387,6 +422,7 @@ article.icon{
 .project-title{
     margin: 1rem;
     color: black;
+    margin-top: 10px;   /* updated while creating certification section */
 }
 
 .project-btn{
@@ -394,13 +430,18 @@ article.icon{
     border-color: rgb(163,163,163);
 }
 
+
+
+
 /* CONTACT PAGE  */
 
 #contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;
+    min-height: 70vh;  
+
+  
 }
 
 .contact-info-upper-container{
@@ -412,6 +453,7 @@ article.icon{
     background: (250,250,250);
     margin: 2rem;
     padding: 0.5rem;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .contact-info-container{
@@ -435,6 +477,12 @@ article.icon{
     height: 2.5rem;
 }
 
+#contact:after {
+    content: "";
+    flex-grow: 1;
+}
+
+
 /* FOOTER SECTION  */
 
 footer{
@@ -444,4 +492,16 @@ footer{
 
 footer p{
     text-align: center;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem; /* Adjust margin as needed */
+    clear: both; /* Clear both left and right floats */
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
 }
